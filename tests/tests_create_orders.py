@@ -1,6 +1,8 @@
 import requests
 import allure
 from json import dumps
+from data import MainUrl, EndPoint
+from  logins import CourierLogin, VerificationCourierLogin
 
 url = 'https://qa-scooter.praktikum-services.ru'
 data1 = {
