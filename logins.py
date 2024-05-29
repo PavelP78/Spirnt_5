@@ -1,13 +1,13 @@
 class CourierLogin:
 
     login_create = {
-        "login": "qw2113192w2erty",
+        "login": "qwerty001",
         "password": "12345",
         "firstName": "Fsaske"
     }
 
     login_equal = {
-        "login": "qw2113192w2erty",
+        "login": "qwerty001",
         "password": "111111",
         "firstName": "RLogin"
     }
@@ -20,7 +20,7 @@ class CourierLogin:
 class VerificationCourierLogin:
 
     login_courier = {
-        "login": "qw2113192w2erty",
+        "login": "qwerty001",
         "password": "12345",
     }
 

@@ -51,12 +51,11 @@ def test_verification_not_existent_courier():
 
 @allure.title('Проверка:  успешный запрос возвращает id')
 def test_verification_courier_answer():
-    response = requests.post(f"{MainUrl.url}/api/v1/courier", data=CourierLogin.login)
-    response = requests.post(f"{MainUrl.url}/api/v1/courier/login", data=CourierLogin.login)
+    response = requests.post(f"{MainUrl.url}/api/v1/courier", data=CourierLogin.login_create)
+    response = requests.post(f"{MainUrl.url}/api/v1/courier/login", data=VerificationCourierLogin.login_courier)
  
     json_response = response.json()
     user_id = json_response['id']
     assert response.json() == {'id': user_id}
     response.delete = requests.delete(f"{MainUrl.url}/api/v1/courier/{user_id}")
     
-     
