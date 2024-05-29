@@ -1,7 +1,7 @@
 import requests
 from data import MainUrl, EndPoint
-from  logins import CourierLogin, VerificationCourierLogin
-
+from  logins import CourierLogin, VerificationCourierLogin, CreateOrders
+from json import dumps
 class HttpMethods:
     def create_new_courier():
         return requests.post(f"{MainUrl.url}{EndPoint.create_courier}", data=CourierLogin.login_create)
@@ -14,3 +14,6 @@ class HttpMethods:
         json_response = response.json()
         user_id = json_response['id']
         return requests.delete(f"{MainUrl.url}{EndPoint.delete_courier}{user_id}")
+    
+    def create_orders():
+        return requests.post(f"{MainUrl.url}/api/v1/orders", data=dumps(CreateOrders.data1))

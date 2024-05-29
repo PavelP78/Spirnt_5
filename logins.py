@@ -1,13 +1,13 @@
 class CourierLogin:
 
     login_create = {
-        "login": "q213192w2erty",
+        "login": "qw2113192w2erty",
         "password": "12345",
         "firstName": "Fsaske"
     }
 
     login_equal = {
-        "login": "q31w2erty",
+        "login": "qw2113192w2erty",
         "password": "111111",
         "firstName": "RLogin"
     }
@@ -20,7 +20,7 @@ class CourierLogin:
 class VerificationCourierLogin:
 
     login_courier = {
-        "login": "q213192w2erty",
+        "login": "qw2113192w2erty",
         "password": "12345",
     }
 
@@ -47,3 +47,58 @@ class VerificationCourierLogin:
         "login": "q029w2erty",
         "password": "1230045"
     }
+    
+class CreateOrders:
+        data1 = {
+            "firstName": "Naruto",
+            "lastName": "Uchiha",
+            "address": "Konoha, 142 apt.",
+            "metroStation": 4,
+            "phone": "+7 800 355 35 35",
+            "rentTime": 5,
+            "deliveryDate": "2024-06-06",
+            "comment": "Saske, come back to Konoha",
+            "color": [
+                "BLACK"
+            ]
+        }
+        
+        data2 = {
+            "firstName": "Naruto",
+            "lastName": "Uchiha",
+            "address": "Konoha, 142 apt.",
+            "metroStation": 4,
+            "phone": "+7 800 355 35 35",
+            "rentTime": 5,
+            "deliveryDate": "2024-06-06",
+            "comment": "Saske, come back to Konoha",
+            "color": [
+                "GREY"
+            ]
+        }
+        
+        data3 = {
+            "firstName": "Naruto",
+            "lastName": "Uchiha",
+            "address": "Konoha, 142 apt.",
+            "metroStation": 4,
+            "phone": "+7 800 355 35 35",
+            "rentTime": 5,
+            "deliveryDate": "2024-06-06",
+            "comment": "Saske, come back to Konoha",
+            "color": [
+                "GREY",
+                "BLACK"
+            ]
+        }
+        
+        data4 = {
+            "firstName": "Naruto",
+            "lastName": "Uchiha",
+            "address": "Konoha, 142 apt.",
+            "metroStation": 4,
+            "phone": "+7 800 355 35 35",
+            "rentTime": 5,
+            "deliveryDate": "2024-06-06",
+            "comment": "Saske, come back to Konoha",
+        }
