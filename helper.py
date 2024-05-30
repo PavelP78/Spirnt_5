@@ -1,14 +1,52 @@
-import random
+from faker import Faker
+import datetime
 
-def generate_random_order():
-	first_name = random.choice(['Naruto', 'Sasuke', 'Sakura'])
-	last_name = random.choice(['Uchiha', 'Hatake', 'Haruno'])
-	address = f"Konoha, {random.randint(100, 200)} apt."
-	metro_station = random.randint(1, 9)
-	phone = f"+7 {''.join(random.choices('0123456789', k=10))}"
-	rent_time = random.randint(1, 10)
-	delivery_date = f"{random.choice(['2024', '2025'])}-{random.choice(['01', '06'])}-{random.choice(['01', '06'])}"
-	comment = f"{random.choice([first_name, last_name])}, come back to Konoha"
+fake = Faker('ru_RU')
+
+
+def generate_order(color):
+	first_name = fake.first_name()
+	last_name = fake.last_name()
+	address = fake.building_number() + ' ' + fake.street_name() + ', ' + fake.city()
+	metro_station = fake.random_int(min=1, max=10)
+	phone = fake.phone_number()
+	rent_time = fake.random_int(min=1, max=10)
+	delivery_date = (datetime.date.today() + datetime.timedelta(days=fake.random_int(min=1, max=365))).strftime(
+		'%Y-%m-%d')
+	comment = fake.sentence(nb_words=3)
+	color = color
 	
-	return {"firstName": first_name, "lastName": last_name, "address": address, "metroStation": metro_station,
-			"phone": phone, "rentTime": rent_time, "deliveryDate": delivery_date, "comment": comment}
+	return {
+		"firstName": first_name,
+		"lastName": last_name,
+		"address": address,
+		"metroStation": metro_station,
+		"phone": phone,
+		"rentTime": rent_time,
+		"deliveryDate": delivery_date,
+		"comment": comment,
+		"color": color
+	}
+
+def generate_courier_login():
+	
+	login = fake.first_name()
+	return {
+		"login": login
+	}
+
+
+def generate_courier_password():
+	password = fake.password()
+	return {
+		"password": password
+	}
+
+
+def generate_courier_first_name():
+	firstName = fake.first_name()
+	return	{
+		"firstName": firstName
+	}
+	
+	
