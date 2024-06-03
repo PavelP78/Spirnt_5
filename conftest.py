@@ -2,6 +2,8 @@ import pytest
 import requests
 from data import MainUrl, EndPoint
 from  logins import CourierLogin, VerificationCourierLogin
+
+
 @pytest.fixture
 def courier():
     requests.post(f"{MainUrl.url}{EndPoint.create_courier}", data=CourierLogin.login_create)
