@@ -6,8 +6,10 @@ class HttpMethods:
     def create_new_courier():
         return requests.post(f"{MainUrl.url}{EndPoint.create_courier}", data=CourierLogin.login_create)
 
+
     def verification_courier():
         return requests.post(f"{MainUrl.url}{EndPoint.verification_courier}", data=VerificationCourierLogin.login_courier)
+
 
     def delete_courier():
         response = requests.post(f"{MainUrl.url}{EndPoint.verification_courier}", data=VerificationCourierLogin.login_courier)

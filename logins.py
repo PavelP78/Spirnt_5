@@ -17,6 +17,7 @@ class CourierLogin:
     "firstName": "Fsaske"
     }
 
+
 class VerificationCourierLogin:
 
     login_courier = {
@@ -29,12 +30,12 @@ class VerificationCourierLogin:
     }
 
     without_password = {
-        "login": "q29w2erty",
+        "login": "qwerty0011",
         "password": ""
     }
 
     incorrect_password = {
-        "login": "q29w2erty",
+        "login": "qwerty0011",
         "password": "654654635"
     }
 
